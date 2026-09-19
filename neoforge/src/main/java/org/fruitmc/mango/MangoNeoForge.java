@@ -11,11 +11,12 @@ import org.fruitmc.mango.config.MangoConfig;
 
 @Mod(Constants.MOD_ID)
 public class MangoNeoForge {
+    public static boolean IS_VULKAN_BACKEND;
 
     public MangoNeoForge(IEventBus eventBus, ModContainer modContainer) {
         if (FMLEnvironment.getDist().isClient()) {
             MangoConfig.INSTANCE.load(FMLPaths.CONFIGDIR.get());
-            modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mc, parent) -> MangoConfigScreen.create(parent));
+            modContainer.registerExtensionPoint(IConfigScreenFactory.class, (_, parent) -> MangoConfigScreen.create(parent));
         }
     }
 }

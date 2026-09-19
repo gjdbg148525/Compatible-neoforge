@@ -5,7 +5,11 @@
   "plugin": "org.fruitmc.mango.mixin.plugin.MangoMixinPlugin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [],
-  "client": [],
+  "client": [
+    "vulkan.entity.LevelExtractorBlockEntityMixin",
+    "vulkan.terrain.LevelExtractorMillisMixin",
+    "vulkan.terrain.SectionCompilerMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
